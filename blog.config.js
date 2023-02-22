@@ -4,7 +4,7 @@ const BLOG = {
   NOTION_PAGE_ID: process.env.NOTION_PAGE_ID || '02ab3b8678004aa69e9e415905ef32a5',
   PSEUDO_STATIC: false, // 伪静态路径，开启后所有文章URL都以 .html 结尾。
   NEXT_REVALIDATE_SECOND: process.env.NEXT_PUBLIC_REVALIDATE_SECOND || 5, // 更新内容缓存间隔 单位(秒)；即每个页面有5秒的纯静态期、此期间无论多少次访问都不会抓取notion数据；调大该值有助于节省Vercel资源、同时提升访问速率，但也会使文章更新有延迟。
-  THEME: process.env.NEXT_PUBLIC_THEME || 'hexo', // 主题， 支持 ['next','hexo',"fukasawa','medium','example'] @see https://preview.tangly1024.com
+  THEME: process.env.NEXT_PUBLIC_THEME || 'next', // 主题， 支持 ['next','hexo',"fukasawa','medium','example'] @see https://preview.tangly1024.com
   THEME_SWITCH: process.env.NEXT_PUBLIC_THEME_SWITCH || false, // 是否显示切换主题按钮
   LANG: 'zh-CN', // e.g 'zh-CN','en-US'  see /lib/lang.js for more.
   SINCE: 2021, // e.g if leave this empty, current year will be used.
@@ -12,10 +12,10 @@ const BLOG = {
 
   AUTHOR: 'chaower', // 您的昵称 例如 tangly1024
   BIO: '一个普通的干饭人🍚', // 作者简介
-  LINK: process.env.NEXT_PUBLIC_LINK || 'https://tangly1024.com', // 网站地址
-  KEYWORDS: 'Notion, 博客', // 网站关键词 英文逗号隔开
+  LINK:'https://github.com/wuzhouchao', // 网站地址
+  KEYWORDS: 'chaower, 博客', // 网站关键词 英文逗号隔开
   // 社交链接，不需要可留空白，例如 CONTACT_WEIBO:''
-  CONTACT_EMAIL: '', // 邮箱地址 例如mail@tangly1024.com
+  CONTACT_EMAIL: '1368372942@qq.com', // 邮箱地址 例如mail@tangly1024.com
   CONTACT_WEIBO: '', // 你的微博个人主页
   CONTACT_TWITTER: '', // 你的twitter个人主页
   CONTACT_GITHUB: 'https://github.com/wuzhouchao', // 你的github个人主页 例如 https://github.com/tangly1024
@@ -24,18 +24,17 @@ const BLOG = {
 
   // 网站字体
   FONT_STYLE: process.env.NEXT_PUBLIC_FONT_STYLE || 'font-serif', // ['font-serif','font-sans'] 两种可选，分别是衬线和无衬线: 参考 https://www.jianshu.com/p/55e410bd2115
-  FONT_URL: [// 字体CSS 例如 https://npm.elemecdn.com/lxgw-wenkai-webfont@1.6.0/style.css
-    'https://fonts.googleapis.com/css?family=Bitter&display=swap',
-    'https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500&display=swap',
-    'https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500&display=swap'
+  FONT_URL: [// 字体CSS
+    'https://fonts.googleapis.com/css?family=Bitter&display=swap', // Bitter 用作英文数字的字体
+    'https://npm.elemecdn.com/lxgw-wenkai-webfont@1.6.0/style.css'
   ],
-  FONT_SANS: [// 无衬线字体 例如'LXGW WenKai'
-    'Bitter', '"PingFang SC"', '-apple-system', 'BlinkMacSystemFont', '"Hiragino Sans GB"',
+  FONT_SANS: [// 无衬线字体
+    'Bitter', '"LXGW WenKai"','"PingFang SC"', '-apple-system', 'BlinkMacSystemFont', '"Hiragino Sans GB"',
     '"Segoe UI Emoji"', '"Segoe UI Symbol"', '"Segoe UI"', '"Noto Sans SC"', 'HarmonyOS_Regular',
     '"Microsoft YaHei"', '"Helvetica Neue"', 'Helvetica', '"Source Han Sans SC"',
     'Arial', 'sans-serif', '"Apple Color Emoji"'],
-  FONT_SERIF: [// 衬线字体 例如'LXGW WenKai'
-    'Bitter', '"Noto Serif SC"', 'SimSun', '"Times New Roman"', 'Times', 'serif',
+  FONT_SERIF: [// 衬线字体 
+    'Bitter', '"LXGW WenKai"','"Noto Serif SC"', 'SimSun', '"Times New Roman"', 'Times', 'serif',
     '"Segoe UI Emoji"', '"Segoe UI Symbol"', '"Apple Color Emoji"'],
   FONT_AWESOME: '/css/all.min.css', // font-awesome 字体图标地址
 
